@@ -5,7 +5,7 @@ ARG BUILD_DATE
 ARG VERSION
 ARG UNIFI_VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="sparklyballs"
+LABEL maintainer="m9ea0vu"
 
 # environment settings
 ARG UNIFI_BRANCH="stable"
