@@ -78,7 +78,7 @@ docker create \
   -p 6789:6789 \
   -v <path to data>:/config \
   --restart unless-stopped \
-  linuxserver/unifi-controller
+  m9ea0vu/docker-unifi-controller
 ```
 
 ### Version Tags
@@ -106,7 +106,7 @@ Compatible with docker-compose v2 schemas.
 version: "2"
 services:
   unifi-controller:
-    image: linuxserver/unifi-controller
+    image: m9ea0vu/docker-unifi-controller
     container_name: unifi-controller
     environment:
       - PUID=1000
@@ -206,7 +206,7 @@ Most of our images are static, versioned, and require an image update and contai
 Below are the instructions for updating containers:
 
 ### Via Docker Run/Create
-* Update the image: `docker pull linuxserver/unifi-controller`
+* Update the image: `docker pull m9ea0vu/docker-unifi-controller`
 * Stop the running container: `docker stop unifi-controller`
 * Delete the container: `docker rm unifi-controller`
 * Recreate a new container with the same docker create parameters as instructed above (if mapped correctly to a host folder, your `/config` folder and settings will be preserved)
@@ -237,12 +237,12 @@ Below are the instructions for updating containers:
 
 If you want to make local modifications to these images for development purposes or just to customize the logic:
 ```
-git clone https://github.com/linuxserver/docker-unifi-controller.git
+git clone https://github.com/m9ea0vu/docker-unifi-controller.git
 cd docker-unifi-controller
 docker build \
   --no-cache \
   --pull \
-  -t linuxserver/unifi-controller:latest .
+  -t m9ea0vu/docker-unifi-controller:latest .
 ```
 
 The ARM variants can be built on x86_64 hardware using `multiarch/qemu-user-static`
